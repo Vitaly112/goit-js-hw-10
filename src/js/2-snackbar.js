@@ -10,7 +10,7 @@ function handleSubmit(event) {
 
     const { delay, state } = event.currentTarget.elements;
 
-    // Валідація введених даних
+    
     const delayValue = parseInt(delay.value);
     if (isNaN(delayValue) || delayValue <= 0) {
         iziToast.error({
@@ -34,7 +34,7 @@ function handleSubmit(event) {
         }, delayValue);
     });
 
-    // Обробка помилок у промісах
+    
     promise
         .then(() => {
             iziToast.success({
